@@ -1,0 +1,16 @@
+.card-sm {
+    width: 550px;
+}
+
+/* Add media queries for screens smaller than 630 pixels */
+@media (max-width: 630px) {
+    .card-sm {
+        width: 100%;
+    }
+}
+
+@media (max-width: 376px) {
+    .card-sm {
+        width: 320px;
+    }
+}
