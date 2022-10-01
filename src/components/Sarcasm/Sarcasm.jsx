@@ -7,6 +7,7 @@ import React, {
 // Components
 import Spinner from "../UI/Spinners/Spinner";
 import Card from "../UI/Card/Card";
+import ClipBoard from "../UI/SVG/Clipboard";
 
 const Sarcasm = props => {
     const [comment, setComment] = useState("");
@@ -36,7 +37,7 @@ const Sarcasm = props => {
 
     let content;
     if (comment.length > 0) {
-        content = <p className="card-text text-dark">{comment}</p>;
+        content = <p id="sarcasm" className="card-text text-dark fw-semibold">{comment}</p>;
     }
 
     if (error) {
@@ -55,10 +56,11 @@ const Sarcasm = props => {
                     </a>
                 </div>
                 <div className="card-body">
-
-                    {content}
-
-                    <button onClick={refreshHandler} className="btn btn-primary mt-1">
+                    <div className="d-flex justify-content-between">
+                        {content}
+                        {!error && !isLoading && <ClipBoard />}
+                    </div>
+                    <button onClick={refreshHandler} className="btn btn-primary mt-1 w-10">
                         Refresh
                     </button>
                 </div>
