@@ -5,9 +5,3 @@
     flex-direction: column;
     margin: 5% auto;
 }
-
-@media (max-width: 768px) {
-    .center {
-        margin: 35% auto;
-    }
-}
