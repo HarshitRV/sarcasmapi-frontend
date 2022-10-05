@@ -17,7 +17,7 @@ const App = () => {
 
         <Sarcasm
           sarcasm="I am not great at advice can I interst you in sarcastic comment?"
-          endpoint="https://sarcasm-api.herokuapp.com/"
+          endpoint="https://sarcasmapi.onrender.com/"
         />
 
       </main>
